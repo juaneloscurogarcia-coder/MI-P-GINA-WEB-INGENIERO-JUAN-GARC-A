@@ -1,0 +1,176 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUAN GARCÍA | Ingeniería de Élite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #c5a021; /* Dorado Premium */
+            --black: #000000;
+            --dark-gray: #050505;
+            --transition: all 0.5s ease-in-out;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cinzel', serif; }
+        
+        body { 
+            background-color: var(--black); 
+            color: var(--gold); 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { width: 85%; max-width: 1100px; margin: 0 auto; }
+        section { padding: 100px 0; border-bottom: 1px solid rgba(197, 160, 33, 0.1); }
+
+        /* Navegación */
+        header { 
+            background: rgba(0, 0, 0, 0.95); 
+            padding: 25px 0; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid var(--gold);
+        }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 900; color: var(--gold); text-decoration: none; letter-spacing: 4px; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { text-decoration: none; color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; transition: var(--transition); opacity: 0.8; }
+        .nav-links a:hover { opacity: 1; text-shadow: 0 0 10px var(--gold); }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(197, 160, 33, 0.05) 0%, rgba(0,0,0,1) 80%);
+            text-align: center;
+        }
+        h1 { font-size: 3.5rem; letter-spacing: 8px; margin-bottom: 20px; text-transform: uppercase; }
+        .btn-gold {
+            border: 1px solid var(--gold);
+            padding: 15px 45px;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            transition: var(--transition);
+            background: transparent;
+            display: inline-block;
+            margin-top: 30px;
+            text-transform: uppercase;
+        }
+        .btn-gold:hover { background: var(--gold); color: var(--black); box-shadow: 0 0 40px rgba(197, 160, 33, 0.4); }
+
+        /* Sección Sobre Mí */
+        .about-section { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+        .about-img { flex: 1; min-width: 300px; border: 1px solid var(--gold); overflow: hidden; }
+        .about-img img { 
+            width: 100%; 
+            display: block; 
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .about-img img:hover { transform: scale(1.05); }
+        .about-text { flex: 1.5; min-width: 300px; }
+        .about-text h3 { font-size: 2.2rem; margin-bottom: 25px; text-transform: uppercase; }
+        .about-text p { color: #ffffff; font-family: 'Inter', sans-serif; font-weight: 300; margin-bottom: 20px; font-size: 1.1rem; }
+
+        /* Servicios */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: #080808; padding: 40px; border: 1px solid rgba(197, 160, 33, 0.15); text-align: center; transition: var(--transition); }
+        .service-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(197, 160, 33, 0.1); }
+        .service-card i { font-size: 2.5rem; margin-bottom: 25px; display: block; }
+
+        /* WhatsApp Dorado */
+        .whatsapp-float { 
+            position: fixed; bottom: 40px; right: 40px; background: var(--gold); 
+            width: 65px; height: 65px; border-radius: 50%; display: flex; 
+            align-items: center; justify-content: center; font-size: 2.2rem; 
+            color: var(--black); z-index: 1000; transition: var(--transition); 
+            box-shadow: 0 0 25px rgba(197, 160, 33, 0.4);
+        }
+        .whatsapp-float:hover { transform: scale(1.1) rotate(5deg); }
+
+        footer { text-align: center; padding: 50px; font-size: 0.7rem; letter-spacing: 3px; color: rgba(197, 160, 33, 0.4); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .about-section { flex-direction: column; text-align: center; }
+            .about-text h3 { text-align: center; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">JUAN GARCÍA</a>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">VISIÓN</a></li>
+                <li><a href="#servicios">SISTEMAS</a></li>
+                <li><a href="https://wa.me/573023155440">CONTACTO</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>PRESTIGIO <br><span style="color:#fff;">TECNOLÓGICO</span></h1>
+            <p style="color:var(--gold); letter-spacing: 3px; font-weight: 700;">IA & TELECOMUNICACIONES DE ALTO NIVEL</p>
+            <a href="https://wa.me/573023155440" class="btn-gold">SOLICITAR CONSULTORÍA PRIVADA</a>
+        </div>
+    </section>
+
+    <section class="container" id="sobre-mi">
+        <div class="about-section">
+            <div class="about-img">
+                <img src="https://i.ibb.co/8DKdxbkZ/IMG-20260105-195752.png" alt="Juan García - Ingeniero de Élite">
+            </div>
+            <div class="about-text">
+                <h3>EL ESTRATEGA</h3>
+                <p><strong>Founder & CEO</strong></p>
+                <p>Ingeniero de Telecomunicaciones y Arquitecto de Sistemas de IA. Fundador de <strong>[ GARCÍA CORE-X ]</strong>. Dedicado a la optimización radical de infraestructuras críticas y a la automatización de la eficiencia mediante Inteligencia Artificial de Élite.</p>
+                <p>Mi nombre es Juan García. Ofrezco <strong>Excelencia Técnica</strong>. Mi propósito es optimizar el flujo de información y automatizar el éxito mediante el poder de la Ingeniería.</p>
+                <a href="https://wa.me/573023155440" class="btn-gold">AGENDA TU ESPACIO</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="servicios">
+        <h2 style="margin-bottom: 60px; text-align: center;">PORTAFOLIO DE PODER</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-microchip"></i>
+                <h3>SISTEMAS IA</h3>
+                <p>Automatización de procesos críticos para máxima eficiencia.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>REDES DE ÉLITE</h3>
+                <p>Configuración de conectividad blindada y de alta velocidad.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>CIBER-SEGURIDAD</h3>
+                <p>Protección total de activos digitales y privacidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/573023155440" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>EXCLUSIVIDAD GARANTIZADA | JUAN GARCÍA © 2026 | MEDELLÍN</p>
+    </footer>
+
+</body>
+</html>
